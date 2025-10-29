@@ -1,22 +1,31 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CMusic - Khám phá</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
+
 <body>
     <div class="container">
+        <!-- Sidebar -->
         <div class="sidebar">
 
         </div>
+        <!-- Navbar và nội dung chính của web-->
         <div class="mainpage">
             <div class="header">
+                <!-- Navbar -->
                 <div class="navbar">
                     <div class="chips">
                         <div class="tab">MUSIC</div>
@@ -32,9 +41,7 @@
                             <i class="fa-solid fa-bell"></i>
                             <div class="ellipse"></div>
                         </div>
-                        <div class="settings">
-                            <i class="fa-solid fa-gear"></i>
-                        </div>
+                        <i class="fa-solid fa-gear"></i>
                         <div class="mini-user-info">
                             <div class="avatar-container">
                                 <img src="assets/img/avatar.png" alt="avatar">
@@ -43,10 +50,28 @@
                         </div>
                     </div>
                 </div>
-                <div class="new-hit-songs"></div>
+                <!-- Những bài hát hot -->
+                <div class="new-hit-songs">
+                    <span>Bản Hit Mới Nhất</span>
+                    <div class="hit-song-info">
+                        <span class="song-name">In My Feelings</span>
+                        <div class="singer-clistening">
+                            <span class="singer-name">Camila Cabello</span>
+                            <span class="clistening">63Tr luợt nghe</span>
+                        </div>
+                    </div>
+                    <div class="hit-song-actions">
+                        <button>Phát ngay</button>
+                        <div class="favourite">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                    </div>
+                </div>
             </div>
+            <!-- Nội dung chính -->
             <div class="content"></div>
         </div>
     </div>
 </body>
+
 </html>

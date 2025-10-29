@@ -17,6 +17,7 @@
     background-color: #17161B;
 }
 
+/*====================== Css for Sidebar ======================*/
 .sidebar {
     display: flex;
     width: 200px;
@@ -24,19 +25,30 @@
     background-image: linear-gradient(#1A1A21 20%, #000000);
 }
 
+/*======================*/
+
 .mainpage {
     display: flex;
     flex-direction: column;
-    gap: 24px;
     width: 100%;
-    padding: 24px 24px 24px;
+    padding: 12px 12px 0 12px;
+    background-color: #000;
 }
 
+/*====================== Css for Header ======================*/
 .header {
     display: flex;
     flex-direction: column;
     gap: 50px;
+    min-height: 200px;
+    background-color: #000;
+    background-image: url('/assets/img/hit-songs-bg/hit1.png');
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: contain;
 }
+
+/*-------------- Css for Navbar ----------------*/
 
 .navbar {
     display: flex;
@@ -49,17 +61,16 @@
     display: flex;
     gap: 12px;
     align-items: center;
-    width: 100%;
     padding: 4px;
 }
 
-.chips .tab {
+.chips>.tab {
     font-weight: 600;
     font-size: 14px;
     color: #75737C;
 }
 
-.chips .tab:first-child{
+.chips>.tab:first-child {
     color: var(--primary-color)
 }
 
@@ -68,7 +79,7 @@
     gap: 8px;
     align-items: center;
     padding: 8px 4px;
-    width: 500px;
+    width: 400px;
     height: 40px;
     background-color: #171717;
     border: 2px solid #3A3B3B;
@@ -86,6 +97,20 @@
     color: #ffffff;
 }
 
+.notification {
+    position: relative;
+}
+
+.notification>.ellipse {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 7px;
+    width: 7px;
+    border-radius: 100%;
+    background-color: var(--primary-color);
+}
+
 .mini-user-info {
     display: flex;
     align-items: center;
@@ -93,15 +118,91 @@
     width: 150px;
     border-radius: 5px;
     background-color: #4A4A54;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 .avatar-container {
     height: 42px;
     width: 42px;
     padding: 4px;
+    border-radius: 5px;
+    margin-right: 8px;
+    background-color: #1A1A21;
 }
 
-.avatar-container img {
+.avatar-container>img {
     height: 100%;
+}
+
+/*--------------*/
+
+/*-------------- Css for New hit songs --------------*/
+.new-hit-songs {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding-bottom: 24px;
+    color: #ffffff;
+}
+
+.new-hit-songs>span {
+    font-weight: 600;
+}
+
+.hit-song-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.hit-song-info>.song-name {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.hit-song-info>.singer-clistening>.singer-name {
+    margin-right: 8px;
+    font-weight: 600;
+}
+
+.hit-song-info>.singer-clistening>.clistening {
+    font-weight: 300;
+    color: #75737C;
+}
+
+.hit-song-actions {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.hit-song-actions>button {
+    height: 35px;
+    width: 100px;
+    border: 0px;
+    border-radius: 50px;
+    cursor: pointer;
+    background-color: var(--primary-color);
+    font-size: 12px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.hit-song-actions>.favourite {
+    height: 35px;
+    width: 35px;
+    align-content: center;
+    text-align: center;
+    border: 2px solid #ffffff;
+    border-radius: 100%;
+    color: var(--primary-color);
+}
+
+/*--------------*/
+
+/*====================== Css for Content ======================*/
+.content {
+    flex: 1;
+    height: 100%;
+    background-color: #1A1A21;
 }
