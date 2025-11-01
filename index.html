@@ -17,150 +17,258 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="app">
         <!-- Sidebar -->
         <div class="sidebar">
-            <div class="logo">
-                <i class="fa-solid fa-music"></i>
-                <span>Music</span>
-            </div>
 
-            <div class="menu">
-                <p class="section-title">MENU</p>
-                <ul>
-                    <li class="active"><i class="fa-solid fa-compass"></i> Khám phá</li>
-                    <li><i class="fa-solid fa-compact-disc"></i> Album</li>
-                    <li><i class="fa-solid fa-microphone"></i> Nghệ sĩ</li>
-                    <li><i class="fa-solid fa-volume-low"></i> Thể loại</li>
-                </ul>
-            </div>
-
-            <div class="menu">
-                <p class="section-title">THƯ VIỆN</p>
-                <ul>
-                    <li><i class="fa-solid fa-compass"></i> Gần đây</li>
-                    <li><i class="fa-solid fa-compact-disc"></i> Album</li>
-                    <li><i class="fa-solid fa-microphone"></i> Yêu thích</li>
-                    <li><i class="fa-solid fa-volume-low"></i> Lưu trữ</li>
-                </ul>
-            </div>
-
-            <div class="menu">
-                <p class="section-title">DANH SÁCH PHÁT</p>
-                <ul>
-                    <li><i class="fa-solid fa-compass"></i> Tạo mới</li>
-                    <li><i class="fa-solid fa-compact-disc"></i> Lofi Chill</li>
-                    <li><i class="fa-solid fa-microphone"></i> Hot Phonk</li>
-                    <li><i class="fa-solid fa-volume-low"></i> Tất cả</li>
-                </ul>
-            </div>
         </div>
         <!-- Navbar và nội dung chính của web-->
         <div class="mainpage">
-            <div class="header">
+            <div class="mainpage__header">
                 <!-- Navbar -->
-                <div class="navbar">
-                    <div class="chips">
-                        <div class="tab">MUSIC</div>
-                        <div class="tab">PODCAST</div>
-                        <div class="tab">LIVE</div>
+                <div class="mainpage__navbar">
+                    <div class="mainpage__chips">
+                        <div class="mainpage__chip">MUSIC</div>
+                        <div class="mainpage__chip">PODCAST</div>
+                        <div class="mainpage__chip">LIVE</div>
                     </div>
-                    <div class="search-bar">
+                    <div class="mainpage__search">
                         <i class="fa-solid fa-magnifying-glass"></i>
                         <span>Tìm kiếm bài hát</span>
                     </div>
-                    <div class="user-bar">
-                        <div class="notification">
+                    <div class="mainpage__userbar">
+                        <div class="mainpage__notification">
                             <i class="fa-solid fa-bell"></i>
-                            <div class="ellipse"></div>
+                            <div class="mainpage__notification-badge"></div>
                         </div>
                         <i class="fa-solid fa-gear"></i>
-                        <div class="mini-user-info">
-                            <div class="avatar-container">
+                        <div class="mainpage__miniuser">
+                            <div class="mainpage__avatar">
                                 <img src="assets/img/avatar.png" alt="avatar">
                             </div>
-                            <span class="user-name">Pham Van Toi</span>
+                            <span class="mainpage__username">Pham Van Toi</span>
                         </div>
                     </div>
                 </div>
                 <!-- Những bài hát hot -->
-                <div class="new-hit-songs">
+                <div class="mainpage__hit-songs">
                     <span>Bản Hit Mới Nhất</span>
-                    <div class="hit-song-info">
-                        <span class="song-name">In My Feelings</span>
-                        <div class="singer-clistening">
-                            <span class="singer-name">Camila Cabello</span>
-                            <span class="clistening">63Tr luợt nghe</span>
+                    <div class="mainpage__hit-info">
+                        <span class="mainpage__song-name">In My Feelings</span>
+                        <div class="mainpage__singer-listening">
+                            <span class="mainpage__singer-name">Camila Cabello</span>
+                            <span class="mainpage__listening-count">63Tr luợt nghe</span>
                         </div>
                     </div>
-                    <div class="hit-song-actions">
-                        <button>Phát ngay</button>
-                        <div class="favourite">
+                    <div class="mainpage__hit-actions">
+                        <button class="mainpage__play-button">Phát ngay</button>
+                        <div class="mainpage__favourite">
                             <i class="fa-solid fa-heart"></i>
                         </div>
                     </div>
                 </div>
             </div>
             <!-- Nội dung chính -->
-            <div class="content">
-                <div class="main-content">
+            <div class="mainpage__content">
+                <div class="mainpage__maincontent">
                     <!-- Top nghệ sĩ -->
-                    <div class="top-artist">
-                        <div class="header">
-                            <span>Top Nghệ Sĩ</span>
+                    <div class="top-artists">
+                        <div class="top-artists__header">
+                            <span>Top nghệ sĩ</span>
                             <span>Tất cả</span>
                         </div>
-                        <div class="list-card">
-                            <div class="card">
-                                <img src="assets/img/top-artist/alan_walker.png" alt="Alan Walker">
-                                <div class="artist-info">
+                        <div class="top-artists__list">
+                            <div class="top-artists__card">
+                                <img src="assets/img/top-artists/alan_walker.png" alt="Alan Walker">
+                                <div class="top-artists__info">
                                     <span>Alan Walker</span>
                                     <span>970Tr lượt nghe</span>
                                 </div>
                             </div>
-                            <div class="card">
-                                <img src="assets/img/top-artist/alan_walker.png" alt="Alan Walker">
-                                <div class="artist-info">
+                            <div class="top-artists__card">
+                                <img src="assets/img/top-artists/son-tung-mtp.png" alt="Sơn Tùng MTP">
+                                <div class="top-artists__info">
+                                    <span>Sơn Tùng MTP</span>
+                                    <span>100Tr lượt nghe</span>
+                                </div>
+                            </div>
+                            <div class="top-artists__card">
+                                <img src="assets/img/top-artists/alan_walker.png" alt="Alan Walker">
+                                <div class="top-artists__info">
                                     <span>Alan Walker</span>
                                     <span>970Tr lượt nghe</span>
                                 </div>
                             </div>
-                            <div class="card">
-                                <img src="assets/img/top-artist/alan_walker.png" alt="Alan Walker">
-                                <div class="artist-info">
+                            <div class="top-artists__card">
+                                <img src="assets/img/top-artists/alan_walker.png" alt="Alan Walker">
+                                <div class="top-artists__info">
                                     <span>Alan Walker</span>
                                     <span>970Tr lượt nghe</span>
                                 </div>
                             </div>
-                            <div class="card">
-                                <img src="assets/img/top-artist/alan_walker.png" alt="Alan Walker">
-                                <div class="artist-info">
+                            <div class="top-artists__card">
+                                <img src="assets/img/top-artists/alan_walker.png" alt="Alan Walker">
+                                <div class="top-artists__info">
                                     <span>Alan Walker</span>
                                     <span>970Tr lượt nghe</span>
                                 </div>
                             </div>
-                            <div class="card">
-                                <img src="assets/img/top-artist/alan_walker.png" alt="Alan Walker">
-                                <div class="artist-info">
+                            <div class="top-artists__card">
+                                <img src="assets/img/top-artists/alan_walker.png" alt="Alan Walker">
+                                <div class="top-artists__info">
                                     <span>Alan Walker</span>
                                     <span>970Tr lượt nghe</span>
                                 </div>
                             </div>
-                            <div class="card">
-                                <img src="assets/img/top-artist/alan_walker.png" alt="Alan Walker">
-                                <div class="artist-info">
+                            <div class="top-artists__card">
+                                <img src="assets/img/top-artists/alan_walker.png" alt="Alan Walker">
+                                <div class="top-artists__info">
                                     <span>Alan Walker</span>
                                     <span>970Tr lượt nghe</span>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="genres-rank"></div>
+                    <div class="mainpage__genres-rank">
+                        <div class="mainpage__genres">
+                            <div class="mainpage__genres-header">
+                                <span>Thể loại</span>
+                                <span>Tất cả</span>
+                            </div>
+                            <div class="mainpage__genres-list">
+                                <div class="genres__item genres__item--1">Dance Beat</div>
+                                <div class="genres__item genres__item--2">Electro Pop</div>
+                                <div class="genres__item genres__item--3">Alternative Indie</div>
+                                <div class="genres__item genres__item--4">Hip Hop</div>
+                                <div class="genres__item genres__item--5">Classical Period</div>
+                                <div class="genres__item genres__item--6">Hip Hop Rap</div>
+                            </div>
+                        </div>
+                        <div class="mainpage__rank">
+                            <div class="mainpage__rank-header">
+                                <span>Bảng xếp hạng</span>
+                                <span>Tất cả</span>
+                            </div>
+                            <div class="mainpage__rank-body">
+                                <div class="mainpage__rank-item">
+                                    <div class="mainpage__rank-info">
+                                        <span>01</span>
+                                        <img src="assets/img/rank/1.png" alt="">
+                                        <div class="mainpage__rank-songinfo">
+                                            <span class="mainpage__rank-songname">Blinding Lights</span>
+                                            <span class="mainpage__rank-singer">The Weeknd</span>
+                                        </div>
+                                    </div>
+                                    <div class="mainpage__rank-actions">
+                                        <span>3:43</span>
+                                        <div class="mainpage__rank-playbtn">
+                                            <i class="fa-solid fa-play"></i>
+                                        </div>
+                                        <i class="fa-solid fa-plus-circle"></i>
+                                    </div>
+                                </div>
+                                <div class="mainpage__rank-item">
+                                    <div class="mainpage__rank-info">
+                                        <span>01</span>
+                                        <img src="assets/img/rank/1.png" alt="">
+                                        <div class="mainpage__rank-songinfo">
+                                            <span class="mainpage__rank-songname">Blinding Lights</span>
+                                            <span class="mainpage__rank-singer">The Weeknd</span>
+                                        </div>
+                                    </div>
+                                    <div class="mainpage__rank-actions">
+                                        <span>3:43</span>
+                                        <div class="mainpage__rank-playbtn">
+                                            <i class="fa-solid fa-play"></i>
+                                        </div>
+                                        <i class="fa-solid fa-plus-circle"></i>
+                                    </div>
+                                </div>
+                                <div class="mainpage__rank-item">
+                                    <div class="mainpage__rank-info">
+                                        <span>01</span>
+                                        <img src="assets/img/rank/1.png" alt="">
+                                        <div class="mainpage__rank-songinfo">
+                                            <span class="mainpage__rank-songname">Blinding Lights</span>
+                                            <span class="mainpage__rank-singer">The Weeknd</span>
+                                        </div>
+                                    </div>
+                                    <div class="mainpage__rank-actions">
+                                        <span>3:43</span>
+                                        <div class="mainpage__rank-playbtn">
+                                            <i class="fa-solid fa-play"></i>
+                                        </div>
+                                        <i class="fa-solid fa-plus-circle"></i>
+                                    </div>
+                                </div>
+                                <div class="mainpage__rank-item">
+                                    <div class="mainpage__rank-info">
+                                        <span>01</span>
+                                        <img src="assets/img/rank/1.png" alt="">
+                                        <div class="mainpage__rank-songinfo">
+                                            <span class="mainpage__rank-songname">Blinding Lights</span>
+                                            <span class="mainpage__rank-singer">The Weeknd</span>
+                                        </div>
+                                    </div>
+                                    <div class="mainpage__rank-actions">
+                                        <span>3:43</span>
+                                        <div class="mainpage__rank-playbtn">
+                                            <i class="fa-solid fa-play"></i>
+                                        </div>
+                                        <i class="fa-solid fa-plus-circle"></i>
+                                    </div>
+                                </div>
+                                <div class="mainpage__rank-item">
+                                    <div class="mainpage__rank-info">
+                                        <span>01</span>
+                                        <img src="assets/img/rank/1.png" alt="">
+                                        <div class="mainpage__rank-songinfo">
+                                            <span class="mainpage__rank-songname">Blinding Lights</span>
+                                            <span class="mainpage__rank-singer">The Weeknd</span>
+                                        </div>
+                                    </div>
+                                    <div class="mainpage__rank-actions">
+                                        <span>3:43</span>
+                                        <div class="mainpage__rank-playbtn">
+                                            <i class="fa-solid fa-play"></i>
+                                        </div>
+                                        <i class="fa-solid fa-plus-circle"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="player"></div>
+                <div class="mainpage__player">
+                    <!-- Player content will go here -->
+                    <div class="mainpage__player-header">
+                        <span>Player</span>
+                        <i class="fa-solid fa-list"></i>
+                    </div>
+                    <div class="mainpage__player-track">
+                        <div class="mainpage__player-track-info">
+                            <img src="assets/img/rank/1.png" alt="Song Image">
+                            <div class="mainpage__player-songdetails">
+                                <span class="mainpage__player-songname">Save Your Tears</span>
+                                <span class="mainpage__player-singername">The Weekend</span>
+                            </div>
+                        </div>
+                        <div class="mainpage__player-track-progress">
+                            <span class="mainpage__player-current-time">1:15</span>
+                            <input type="range" min="0" max="100" value="30" class="mainpage__player-progress-bar">
+                            <span class="mainpage__player-total-time">3:35</span>
+                        </div>
+                    </div>
+                    <div class="mainpage__player-controls">
+                        <i class="fa-solid fa-repeat"></i>
+                        <i class="fa-solid fa-backward-step"></i>
+                        <div class="mainpage__player-playbtn">
+                            <i class="fa-solid fa-play-circle"></i>
+                        </div>
+                        <i class="fa-solid fa-forward-step"></i>
+                        <i class="fa-solid fa-shuffle"></i>
+                </div>
             </div>
-        </div>
-    </div>
 </body>
 
 </html>

@@ -10,76 +10,46 @@
     --primary-color: #5674FF;
 }
 
-.container {
+.app {
     display: flex;
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
     background-color: #17161B;
+    overflow: hidden;
+}
+
+
+/*====================== Css for Classes ======================*/
+.top-artists, .mainpage__genres, .mainpage__rank {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 12px;
+    border-radius: 5px;
+    background-color: #1A1A21;
+}
+
+.top-artists__header, .mainpage__genres-header, .mainpage__rank-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.top-artists__header > span:last-child, .mainpage__genres-header > span:last-child, .mainpage__rank-header > span:last-child {
+    font-size: 12px;
+    color: #75737C;
+    cursor: pointer;
 }
 
 /*====================== Css for Sidebar ======================*/
 .sidebar {
     display: flex;
-    flex-direction: column;
-    /* width: 200px; */
-    min-width: 240px;
+    width: 20%;
     height: 100%;
     background-image: linear-gradient(#1A1A21 20%, #000000);
-}
-
-/* Logo */
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 20px;
-    font-weight: 600;
-    padding: 0 25px 15px;
-    color: var(--primary-color);
-}
-
-.logo i {
-    font-size: 24px;
-}
-
-/* Section title */
-.section-title {
-  font-size: 12px;
-  letter-spacing: 1px;
-  color: #75737C;
-  margin: 20px 0 10px 25px;
-}
-
-/* Menu items */
-.menu ul {
-    list-style: none;
-}
-
-.menu li {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 10px 25px;
-    font-size: 15px;
-    color: #eee;
-    cursor: pointer;
-    transition: all 0.2s ease;
-}
-
-.menu li i {
-    font-size: 14px;
-}
-
-.menu li:hover {
-    background: #242424;
-    color: #fff;
-}
-
-/* Mục đang chọn */
-.menu li.active {
-    color: var(--primary-color);
-    background: #2d2d2d;
-    border-left: 3px solid var(--primary-color);
 }
 
 /*======================*/
@@ -93,11 +63,10 @@
 }
 
 /*====================== Css for Header ======================*/
-.mainpage>.header {
+.mainpage__header {
     display: flex;
     flex-direction: column;
     gap: 50px;
-    min-height: 200px;
     background-color: #000;
     background-image: url('/assets/img/hit-songs-bg/hit1.png');
     background-repeat: no-repeat;
@@ -107,31 +76,32 @@
 
 /*-------------- Css for Navbar ----------------*/
 
-.navbar {
+
+.mainpage__navbar {
     display: flex;
     gap: 48px;
     align-items: center;
     width: 100%;
 }
 
-.chips {
+.mainpage__chips {
     display: flex;
     gap: 12px;
     align-items: center;
     padding: 4px;
 }
 
-.chips>.tab {
+.mainpage__chips > .mainpage__chip {
     font-weight: 600;
     font-size: 14px;
     color: #75737C;
 }
 
-.chips>.tab:first-child {
+.mainpage__chips > .mainpage__chip:first-child {
     color: var(--primary-color)
 }
 
-.search-bar {
+.mainpage__search {
     display: flex;
     gap: 8px;
     align-items: center;
@@ -145,7 +115,7 @@
     font-size: 12px;
 }
 
-.user-bar {
+.mainpage__userbar {
     display: flex;
     justify-content: flex-end;
     gap: 12px;
@@ -154,11 +124,12 @@
     color: #ffffff;
 }
 
-.notification {
+
+.mainpage__notification {
     position: relative;
 }
 
-.notification>.ellipse {
+.mainpage__notification > .mainpage__notification-badge {
     position: absolute;
     top: 0;
     right: 0;
@@ -168,7 +139,8 @@
     background-color: var(--primary-color);
 }
 
-.mini-user-info {
+
+.mainpage__miniuser {
     display: flex;
     align-items: center;
     height: 42px;
@@ -178,7 +150,7 @@
     font-size: 12px;
 }
 
-.avatar-container {
+.mainpage__avatar {
     height: 42px;
     width: 42px;
     padding: 4px;
@@ -187,14 +159,15 @@
     background-color: #1A1A21;
 }
 
-.avatar-container>img {
+.mainpage__avatar > img {
     height: 100%;
 }
 
 /*--------------*/
 
 /*-------------- Css for New hit songs --------------*/
-.new-hit-songs {
+
+.mainpage__hit-songs {
     display: flex;
     flex-direction: column;
     gap: 24px;
@@ -202,42 +175,43 @@
     color: #ffffff;
 }
 
-.new-hit-songs>span {
+.mainpage__hit-songs > span {
     font-weight: 600;
 }
 
-.hit-song-info {
+.mainpage__hit-info {
     display: flex;
     flex-direction: column;
     gap: 4px;
     padding-left: 12px;
 }
 
-.hit-song-info>.song-name {
-    font-size: 32px;
+.mainpage__hit-info > .mainpage__song-name {
+    font-size: 48px;
     font-weight: bold;
 }
 
-.hit-song-info>.singer-clistening>.singer-name {
+.mainpage__hit-info > .mainpage__singer-listening > .mainpage__singer-name {
     margin-right: 8px;
+    font-size: 20px;
     font-weight: 600;
 }
 
-.hit-song-info>.singer-clistening>.clistening {
+.mainpage__hit-info > .mainpage__singer-listening > .mainpage__listening-count {
     font-weight: 300;
     color: #75737C;
 }
 
-.hit-song-actions {
+.mainpage__hit-actions {
     display: flex;
     gap: 12px;
     align-items: center;
     padding-left: 12px;
 }
 
-.hit-song-actions>button {
-    height: 35px;
-    width: 100px;
+.mainpage__hit-actions > .mainpage__play-button {
+    height: 40px;
+    width: 90px;
     border: 0px;
     border-radius: 50px;
     cursor: pointer;
@@ -247,9 +221,9 @@
     color: #ffffff;
 }
 
-.hit-song-actions>.favourite {
-    height: 35px;
-    width: 35px;
+.mainpage__hit-actions > .mainpage__favourite {
+    height: 40px;
+    width: 40px;
     align-content: center;
     text-align: center;
     border: 2px solid #ffffff;
@@ -260,79 +234,295 @@
 /*--------------*/
 
 /*====================== Css for Content ======================*/
-.content {
+.mainpage__content {
     display: flex;
     flex: 1;
     gap: 12px;
     height: 100%;
     background-color: #000;
+    overflow-y: auto;
 }
 
-.main-content {
+.mainpage__maincontent {
     display: flex;
     flex-direction: column;
     gap: 12px;
     width: 100%;
     color: #ffffff;
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 
-.player {
-    flex: 1;
-    min-width: 100px;
-}
-
-.top-artist {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    padding: 12px;
-    background-color: #1A1A21;
-}
-
-.top-artist>.header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-}
-
-.top-artist>.header>span:last-child {
-    font-size: 12px;
-    color: #75737C;
-    cursor:pointer;
-}
-
-.top-artist>.list-card {
+/*-------------- Css for Top artists --------------*/
+.top-artists__list {
     display: flex;
     justify-content: space-between;
     width: 100%;
 }
 
-.top-artist>.list-card>.card {
+.top-artists__card {
     display: flex;
     flex-direction: column;
     gap: 8px;
     align-items: center;
 }
 
-.top-artist>.list-card>.card>img {
+.top-artists__card > img {
     width: 100px;
     height: 70px;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
-.top-artist>.list-card>.card>.artist-info {
+.top-artists__info {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.top-artist>.list-card>.card>.artist-info>span:first-child {
+.top-artists__info > span:first-child {
     font-weight: 600;
 }
 
-.top-artist>.list-card>.card>.artist-info>span:last-child {
+.top-artists__info > span:last-child {
     font-size: 12px;
     color: #75737C;
+}
+
+/*-------------- Css for Genres, Rank --------------*/
+
+.mainpage__genres-rank {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.mainpage__genres {
+    justify-content: flex-start;
+}
+
+.mainpage__genres-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    justify-content: space-between;
+    gap: 8px;
+    width: 100%;
+}
+
+.genres__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90px;
+    padding: 12px;
+    border-radius: 10px;
+}
+
+.genres__item--1 {
+    background-color: #466A89;
+}
+
+.genres__item--2 {
+    background-color: #A49A85;
+}
+
+.genres__item--3 {
+    grid-row-start: 2;
+    background-color: #A34C33;
+}
+
+.genres__item--4 {
+    grid-row-start: 2;
+    background-color: #0C4045;
+}
+
+.genres__item--5 {
+    grid-row-start: 3;
+    background-color: #A77895;
+}
+
+.genres__item--6 {
+    grid-row-start: 3;
+    background-color: #5647A5;
+}
+
+.mainpage__rank {
+    flex: 1;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.mainpage__rank-body {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+}
+
+.mainpage__rank-item {
+    display: flex;
+    gap: 1px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mainpage__rank-info {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    width: 100%;
+}
+
+.mainpage__rank-info > span {
+    font-size: 14px;
+}
+
+.mainpage__rank-info > img {
+    height: 70px;
+    width: 70px;
+    border-radius: 5px;
+}
+
+.mainpage__rank-songinfo {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    justify-content: center;
+}
+
+.mainpage__rank-songname {
+    font-weight: 600;
+}
+
+.mainpage__rank-singer {
+    font-size: 14px;
+}
+
+.mainpage__rank-actions {
+    display: flex;
+    gap: 16px;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+}
+
+.mainpage__rank-actions > span {
+    font-size: 14px;
+}
+
+.mainpage__rank-playbtn {
+    height: 32px;
+    width: 32px;
+    align-content: center;
+    text-align: center;
+    border: 2px solid #4E4E4E;
+    border-radius: 5px;
+    background-color: rgba(137, 137, 137, 0.19);
+    font-size: 10px;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+.mainpage__rank-actions > i {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/*-------------- Css for Player --------------*/
+.mainpage__player {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    border-radius: 5px;
+    background-color: #1A1A21;
+    color: #ffffff;
+}
+
+ .mainpage__player-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 12px 12px 0 12px;
+    color: #ffffff;
+}
+
+.mainpage__player-track {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+    padding: 0 12px;
+}
+
+.mainpage__player-track-info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    width: 100%;
+}
+
+.mainpage__player-track-info > img {
+    height: 100px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.mainpage__player-songdetails {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: center;
+}
+
+.mainpage__player-songname {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.mainpage__player-singername {
+    font-size: 14px;
+}
+
+.mainpage__player-track-progress {
+    display: flex;
+    gap: 4px;
+    width: 100%;
+    align-items: center;
+}
+
+.mainpage__player-current-time, .mainpage__player-total-time {
+    font-size: 14px;
+}
+
+.mainpage__player-progress-bar {
+    width: 225px;
+    height: 4px;
+    border-radius: 50px;
+    background-color: var(--primary-color);
+    cursor: pointer;
+}
+
+.mainpage__player-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-color);
+}
+
+.mainpage__player-controls > i {
+    font-size: 16px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.mainpage__player-playbtn {
+    font-size: 48px;
 }
